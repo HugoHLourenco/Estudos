@@ -1,0 +1,45 @@
+body {
+    background-color: darkslategray;
+}
+
+header {
+    border-style: groove;
+    font-size: 25px;
+    margin-left: 200px;
+    text-align: center;
+    box-shadow: 5px 5px 10px black;
+    border-radius: 6px;
+    background-color: antiquewhite;
+    color: darkslategray;
+    width: 1000px;
+}
+
+main {
+    margin-top: 20px;
+    border-style: groove;
+    margin-left: 200px;
+    font-size: 25px;
+    width: 1000px;
+    background-color: antiquewhite;
+    color: darkslategray;
+    text-align: center;
+    box-shadow: 5px 5px 10px black;
+    border-radius: 6px;
+    height: 200px;
+}
+
+input#n1, #n2 {
+    height: 30px;
+    border-radius: 6px;
+    font-size: 25px;
+}
+
+button#bt {
+    width: 200px;
+    height: 45px;
+    border-radius: 6px;
+    background-color: darkslategray;
+    color: antiquewhite;
+    border-style: groove;
+    border-color: antiquewhite;   
+}
