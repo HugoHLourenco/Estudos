@@ -49,6 +49,7 @@ function gauss() {
         document.getElementById("res").innerText = ""
         document.getElementById("n1").value = ""
         document.getElementById("n2").value = ""
+        document.getElementById("n1").focus()
     }
 
     bt.addEventListener("click", gauss)
