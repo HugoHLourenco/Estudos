@@ -32,8 +32,8 @@ function gauss() {
         console.log(res)
         document.getElementById("res").innerText = "A soma dos números de " + num1.toLocaleString("pt-BR") + " à " + num2.toLocaleString("pt-BR") + " é: " + res.toLocaleString("pt-BR")
     } else if (vetor.length % 2 == 1) {
-        meio = Math.floor(vetor.length / 2)
-        res = ((num1 + num2) * meio) + Math.floor(vetor.length / 2) + 1
+        meio = vetor.length / 2
+        res = ((num1 + num2) * meio)
         console.log(res)
         document.getElementById("res").innerText = "A soma dos números de " + num1.toLocaleString("pt-BR") + " à " + num2.toLocaleString("pt-BR") + " é: " + res.toLocaleString("pt-BR")
     } else if (num1 === num2 * -1){
