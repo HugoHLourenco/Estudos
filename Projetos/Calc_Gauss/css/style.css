@@ -2,10 +2,10 @@ body {
     background-color: darkslategray;
 }
 
-header {
+.header {
     border-style: groove;
     font-size: 25px;
-    margin-left: 200px;
+    margin: auto;
     text-align: center;
     box-shadow: 5px 5px 10px black;
     border-radius: 6px;
@@ -14,10 +14,10 @@ header {
     width: 1000px;
 }
 
-main {
-    margin-top: 20px;
+.main {
     border-style: groove;
-    margin-left: 200px;
+    margin: auto;
+    margin-top: 50px;
     font-size: 25px;
     width: 1000px;
     background-color: antiquewhite;
@@ -34,7 +34,7 @@ input#n1, #n2 {
     font-size: 25px;
 }
 
-button#bt {
+button {
     width: 200px;
     height: 45px;
     border-radius: 6px;
@@ -42,4 +42,8 @@ button#bt {
     color: antiquewhite;
     border-style: groove;
     border-color: antiquewhite;   
+}
+
+button:hover{
+    background-color: darkslategray;
 }
