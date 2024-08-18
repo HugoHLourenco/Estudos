@@ -32,8 +32,6 @@ input#n1, #n2 {
     height: 30px;
     border-radius: 6px;
     font-size: 25px;
-    box-shadow: 2px 2px 1px black;
-    text-align: right;
 }
 
 button {
@@ -43,16 +41,9 @@ button {
     background-color: darkslategray;
     color: antiquewhite;
     border-style: groove;
-    border-color: antiquewhite; 
-    font-size: 25px;  
+    border-color: antiquewhite;   
 }
 
 button:hover{
-    background-color: rgb(34, 58, 58);
-    color: rgb(199, 188, 173);
-}
-
-button:active{
-    transform: translateY(2px);
-    box-shadow: 2px 2px 1px black;
+    background-color: darkslategray;
 }
