@@ -25,13 +25,15 @@ body {
     text-align: center;
     box-shadow: 5px 5px 10px black;
     border-radius: 6px;
-    height: 200px;
+    height:auto;
 }
 
 input#n1, #n2 {
     height: 30px;
     border-radius: 6px;
     font-size: 25px;
+    box-shadow: 2px 2px 2px black;
+    text-align: right;
 }
 
 button {
@@ -42,8 +44,21 @@ button {
     color: antiquewhite;
     border-style: groove;
     border-color: antiquewhite;   
+    font-size: 25px;
 }
 
 button:hover{
-    background-color: darkslategray;
+    background-color: rgb(31, 53, 53);
+    color: rgb(167, 156, 142);
+}
+
+button:active{
+    box-shadow: 2px 2px 2px black;
+    transform: translateY(2px);
+}
+
+.res{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 40px;
 }
