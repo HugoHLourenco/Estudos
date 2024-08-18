@@ -1,5 +1,6 @@
 body {
     background-color: darkslategray;
+    font-family: cursive;
 }
 
 .header {
@@ -28,12 +29,14 @@ body {
     height:auto;
 }
 
-input#n1, #n2 {
+input {
     height: 30px;
+    width: auto;
     border-radius: 6px;
     font-size: 25px;
     box-shadow: 2px 2px 2px black;
     text-align: right;
+    font-family: cursive;
 }
 
 button {
@@ -45,6 +48,7 @@ button {
     border-style: groove;
     border-color: antiquewhite;   
     font-size: 25px;
+    font-family: cursive;
 }
 
 button:hover{

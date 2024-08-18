@@ -42,6 +42,8 @@ function gauss() {
 // Limpar campo
 function limpar() {
     document.getElementById("res").innerText = ""
+    document.getElementById("n1").value = ""
+    document.getElementById("n2").value = ""
 }
 
 bt.addEventListener("click", gauss)
