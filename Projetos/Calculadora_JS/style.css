@@ -1,0 +1,31 @@
+.calculadora {
+    margin: auto;
+    margin-top: 50px;
+    height: 400px;
+    width: 400px;
+    background-color: aquamarine;
+    border-radius: 3%;
+    border-style:solid;
+}
+
+.display {
+    background-color: aqua;
+    height: 40px;
+    width: 380px;
+    margin: auto;
+    margin-top: 10px;
+    border-style:solid;
+}
+
+.botoes {
+    margin:50px;
+    background-color: black;
+}
+
+button {
+    margin: 1px;
+}
+
+body {
+    background-color: dimgray;
+}
