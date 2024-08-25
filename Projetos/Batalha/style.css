@@ -1,0 +1,16 @@
+body {
+    background-color: dimgray;
+}
+
+.tela {
+    margin-left: 60%;
+    margin-top: 35%;
+}
+
+button {
+    font-size: 130%;
+}
+
+.hotBar {
+    display: flex;
+}
