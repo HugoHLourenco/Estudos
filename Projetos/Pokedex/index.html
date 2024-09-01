@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="./favicon/favicon-16x16.png">
     <link rel="stylesheet" href="./css/style.css">
+
+    <script defer src="./js/script.js"></script>
+
     <title>Pokédex</title>
 </head>
 <body>
@@ -15,6 +18,17 @@
             <span class="pokemon_num">6</span> - 
             <span class="pokemon_name">charizardo</span>
         </h1>
+
+        <form class="form">
+            <input type="search" class="input_search"
+            placeholder="Nome ou número"
+            required>
+        </form>
+
+        <div class="buttons">
+            <button class="button btn-volt">Voltar &lt;</button>
+            <button class="button btn-prox">Próximo &gt;</button>
+        </div>
 
         <img src="./images/pokedex.png" alt="pokedex" class="pokedex">
     </main>
