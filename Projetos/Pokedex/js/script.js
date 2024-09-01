@@ -10,7 +10,7 @@ const btnShiny = document.querySelector('.btn-shiny');
 
 let numPoke = 1;
 let imagem = "";
-let shiny = true;
+let shiny = false;
 
 const fetchPokemon = async (pokemon) => {
     const APIResponse = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemon}`);
@@ -28,18 +28,18 @@ const renderPokemon = async (pokemon) => {
 
     const data = await fetchPokemon(pokemon);
 
-     if (data.id <= 649 && shiny === true) {
+    if  (data.id <= 649 && shiny === true) {
         pokemonImage.style.display = 'block';
         pokemonName.innerHTML = data.name;
         pokemonNumber.innerHTML = data.id;
         pokemonImage.src = data['sprites']['versions']['generation-v']['black-white']['animated']['front_shiny'];
 
-        input.value = "";
+        input.value = ""; 
 
         imagem = data['sprites']['versions']['generation-v']['black-white']['animated']['front_default'];
 
         numPoke = data.id;
-    } else if (data.id <= 649) {
+    } else if (data.id <= 649 && shiny === false) {
         pokemonImage.style.display = 'block';
         pokemonName.innerHTML = data.name;
         pokemonNumber.innerHTML = data.id;
@@ -50,9 +50,7 @@ const renderPokemon = async (pokemon) => {
         imagem = data['sprites']['versions']['generation-v']['black-white']['animated']['front_default'];
 
         numPoke = data.id;
-    }
-    
-    else {
+    } else {
         pokemonName.innerHTML = "???"
         pokemonNumber.innerHTML = "???"
         pokemonImage.style.display = 'none';
@@ -81,6 +79,7 @@ btnShiny.addEventListener('click', async (pokemon) => {
     if (pokemonImage.src !== imagem) {
         pokemonImage.src = imagem
         shiny = false;
+        btnShiny.style.color = "red";
         return shiny;
     } 
     else {
@@ -88,6 +87,7 @@ btnShiny.addEventListener('click', async (pokemon) => {
         if (imgShiny) {
             pokemonImage.src = imgShiny['sprites']['versions']['generation-v']['black-white']['animated']['front_shiny'];
             shiny = true;
+            btnShiny.style.color = "green";
             return shiny;   
         }
     }

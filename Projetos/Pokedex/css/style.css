@@ -104,8 +104,8 @@ main {
     border: 2px solid #000;
     border-radius: 100%;
     font-size: cLamp(8px, 5vw, 1rem);
-    font-weight: 400;
-    color: aliceblue;
+    font-weight: 600;
+    color: red;
     box-shadow: -2px 3px 0 #222, -4px 6px 0 #000;
     display: flex;
     gap: 20px;
