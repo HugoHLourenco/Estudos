@@ -23,12 +23,12 @@ const fetchPokemon = async (pokemon) => {
 }
 
 const renderPokemon = async (pokemon) => {
-    pokemonNumber.innerHTML = ""
     pokemonName.innerHTML = "Buscando..."
+    pokemonNumber.innerHTML = "???"
 
     const data = await fetchPokemon(pokemon);
-
-    if  (data.id <= 649 && shiny === true) {
+    
+    if (data.id <= 649 && shiny === true) {
         pokemonImage.style.display = 'block';
         pokemonName.innerHTML = data.name;
         pokemonNumber.innerHTML = data.id;
@@ -51,9 +51,9 @@ const renderPokemon = async (pokemon) => {
 
         numPoke = data.id;
     } else {
-        pokemonName.innerHTML = "???"
         pokemonNumber.innerHTML = "???"
-        pokemonImage.style.display = 'none';
+        pokemonName.innerHTML = "MissingNO."
+        pokemonImage.src = "../images/missigno.png"
     }
 }
 
