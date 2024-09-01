@@ -6,8 +6,10 @@ const form = document.querySelector('.form');
 const input = document.querySelector('.input_search');
 const btnVolt = document.querySelector('.btn-volt');
 const btnProx = document.querySelector('.btn-prox');
+const btnShiny = document.querySelector('.btn-shiny');
 
 let numPoke = 1;
+let imagem = "";
 
 const fetchPokemon = async (pokemon) => {
     const APIResponse = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemon}`);
@@ -33,6 +35,8 @@ const renderPokemon = async (pokemon) => {
 
         input.value = "";
 
+        imagem = data['sprites']['versions']['generation-v']['black-white']['animated']['front_default'];
+
         numPoke = data.id;
     } else {
         pokemonName.innerHTML = "???"
@@ -47,16 +51,31 @@ form.addEventListener('submit', (event) => {
     renderPokemon(input.value.toLowerCase());
 });
 
-btnVolt.addEventListener('click', () => {
+btnVolt.addEventListener('click', async () => {
     if (numPoke > 1) {
         numPoke -= 1;
         renderPokemon(numPoke);
     }
 });
-btnProx.addEventListener('click', () => {
+
+btnProx.addEventListener('click', async () => {
     numPoke += 1;
     renderPokemon(numPoke);
 });
+
+btnShiny.addEventListener('click', async (pokemon) => {
+    if (pokemonImage.src !== imagem) {
+        pokemonImage.src = imagem
+    } 
+    else {
+        const num = parseInt(pokemonNumber.innerHTML);
+        const imgShiny = await fetchPokemon(num.toString());
+        if (imgShiny) {
+            pokemonImage.src = imgShiny['sprites']['versions']['generation-v']['black-white']['animated']['front_shiny'];
+        }
+    }
+
+})
 
 renderPokemon(numPoke);
 
