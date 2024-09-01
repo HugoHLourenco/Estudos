@@ -92,6 +92,7 @@ main {
 .button:active {
     box-shadow: inset -4px 4px 0 #222;
     font-size: 0.95rem;
+    background-color: #9a3c52;
 }
 
 .btn-shiny {
@@ -113,4 +114,5 @@ main {
 .btn-shiny:active {
     box-shadow: inset -4px 4px 0 #222;
     font-size: 0.95rem;
+    background-color: #9a3c52;
 }
