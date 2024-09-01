@@ -13,7 +13,7 @@ const btnGeracao = document.querySelector('.btn-geracao')
 let numPoke = 1;
 let imagem = "";
 let shiny = false;
-let geracao = "";
+let geracao = "5";
 
 // Busca pelos pokemons ----------------------------------------
 const fetchPokemon = async (pokemon) => {
@@ -33,6 +33,36 @@ const renderPokemon = async (pokemon) => {
     const data = await fetchPokemon(pokemon);
     
     switch (geracao) {
+        // Gen 7 ---------------------------------------------
+        case "7":
+            if (data.id <= 807 && shiny === true) {
+                pokemonImage.style.display = 'block';
+                pokemonName.innerHTML = data.name;
+                pokemonNumber.innerHTML = data.id;
+                pokemonImage.src = data['sprites']['versions']['generation-vii']['ultra-sun-ultra-moon']['front_shiny'];
+        
+                input.value = ""; 
+        
+                imagem = data['sprites']['versions']['generation-vii']['ultra-sun-ultra-moon']['front_default'];
+        
+                numPoke = data.id;
+            } else if (data.id <= 807 && shiny === false) {
+                pokemonImage.style.display = 'block';
+                pokemonName.innerHTML = data.name;
+                pokemonNumber.innerHTML = data.id;
+                pokemonImage.src = data['sprites']['versions']['generation-vii']['ultra-sun-ultra-moon']['front_default'];
+        
+                input.value = "";
+        
+                imagem = data['sprites']['versions']['generation-vii']['ultra-sun-ultra-moon']['front_default'];
+        
+                numPoke = data.id;
+            } else {
+                pokemonNumber.innerHTML = "???"
+                pokemonName.innerHTML = "MissingNO."
+                pokemonImage.src = "../images/missigno.png"
+            }
+            break;
         // Gen 6 ------------------------------------------------
         case "6":
             if (data.id <= 721 && shiny === true) {
@@ -224,6 +254,12 @@ btnVolt.addEventListener('click', async () => {
 // Proximo ------------------------------------------------
 btnProx.addEventListener('click', async () => {
         switch (geracao) {
+            case "7":
+                if (numPoke < 807){
+                    numPoke += 1;
+                    renderPokemon(numPoke);
+                }
+            break;
             case "6":
                 if (numPoke < 721){
                     numPoke += 1;
@@ -266,6 +302,23 @@ btnProx.addEventListener('click', async () => {
 // Botão dos Shinys ----------------------------------------
 btnShiny.addEventListener('click', async (pokemon) => {
     switch(geracao) {
+        case "7":
+            if (pokemonImage.src !== imagem) {
+                pokemonImage.src = imagem
+                shiny = false;
+                btnShiny.style.color = "red";
+                return shiny;
+            } 
+            else {
+                const imgShiny = await fetchPokemon(numPoke);
+                if (imgShiny) {
+                    pokemonImage.src = imgShiny['sprites']['versions']['generation-vii']['ultra-sun-ultra-moon']['front_shiny'];
+                    shiny = true;
+                    btnShiny.style.color = "green";
+                    return shiny;   
+                }
+            } 
+            break;
         case "6":
             if (pokemonImage.src !== imagem) {
                 pokemonImage.src = imagem
@@ -366,5 +419,3 @@ btnGeracao.addEventListener('click', () => {
 })
 
 renderPokemon(numPoke);
-geracao = "5";
-
