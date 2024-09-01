@@ -33,6 +33,8 @@ const renderPokemon = async (pokemon) => {
     const data = await fetchPokemon(pokemon);
     
     switch (geracao) {
+        // Gen 8 ---------------------------------------------
+        
         // Gen 7 ---------------------------------------------
         case "7":
             if (data.id <= 807 && shiny === true) {
@@ -193,7 +195,7 @@ const renderPokemon = async (pokemon) => {
         
                 input.value = ""; 
         
-                imagem = data['sprites']['versions']['generation-ii']['crystal']['front_default'];
+                imagem = data['sprites']['versions']['generation-ii']['crystal']['front_shiny'];
         
                 numPoke = data.id;
             } else if (data.id <= 251 && shiny === false) {
