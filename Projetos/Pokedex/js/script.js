@@ -195,7 +195,7 @@ const renderPokemon = async (pokemon) => {
 
                 input.value = "";
 
-                imagem = data['sprites']['versions']['generation-ii']['crystal']['front_shiny'];
+                imagem = data['sprites']['versions']['generation-ii']['crystal']['front_default'];
 
                 numPoke = data.id;
             } else if (data.id <= 251 && shiny === false) {
