@@ -406,9 +406,8 @@ btnShiny.addEventListener('click', async (pokemon) => {
                     return shiny;
                 }
             }
-            break
+            break;
     }
-
 })
 
 // Mudar Geração --------------------------------------------
