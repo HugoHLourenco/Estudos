@@ -246,7 +246,7 @@ form.addEventListener('submit', (event) => {
     renderPokemon(input.value.toLowerCase());
 });
 
-// Volts -------------------------------------------------
+// Voltar -------------------------------------------------
 btnVolt.addEventListener('click', async () => {
     if (numPoke > 1) {
         numPoke -= 1;
