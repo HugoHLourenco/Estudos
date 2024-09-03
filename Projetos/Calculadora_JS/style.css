@@ -3,14 +3,14 @@ body {
 }
 
 .calculadora{
-    margin: auto;
-    margin-top: 10%;
+    margin: 12.5% 40%;
     background-color: dimgray;
     border: 1px solid black;
     width: 264px;
     height: auto;
     border-radius: 10px;
     box-shadow: 10px 10px 15px black;
+
 }
 
 .linha{
