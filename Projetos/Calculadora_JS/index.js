@@ -32,6 +32,12 @@ createApp({
                 case '+/-':
                     this.inverter()
                     break
+                case 'CE':
+                    this.clear()
+                    break
+                case 'vorta':
+                    this.vorta()
+                    break
                 default:
                     this.lidarNumero(bt)
             }
@@ -51,9 +57,9 @@ createApp({
                 if (this.divisor === parseInt(this.divisor)) {
                     this.display = this.divisor
                 } else if (this.numeroAtual === '0') {
-                    this.display = 'erro'
+                    this.display = 'Erro'
                 } else {
-                    this.display = this.divisor.toFixed(8)
+                    this.display = this.divisor
                 }
                 this.numeroAtual = ""
                 this.numeroAnterior = ""
@@ -73,7 +79,7 @@ createApp({
         },
 
         lidarNumero(bt) {
-            if (this.display === "0" || this.display === 'erro') {
+            if (this.display === "0" || this.display === 'Erro') {
                 this.display = bt
             } else {
                 this.display += bt
@@ -131,6 +137,14 @@ createApp({
                 this.decimal += '.'
                 this.display = this.decimal
             }
+        },
+
+        clear() {
+            this.display = '0'
+        },
+
+        vorta() {
+
         }
     }
 }).mount("#app")

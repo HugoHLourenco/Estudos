@@ -7,42 +7,47 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div id="app">
-        <div class="calculadora">
-            <div class="marca">made in china</div>
-            <div class="display">
-                {{display}}
-            </div>
-            <div class="linha">
-                <button class="func2" @click = "lidarClear()">AC</button>
-                <button class="func2" @click = "inverter()">+/-</button>
-            </div>
-            <div class="linha">
-                <button class="bt" @click = "lidarBotao('7')">7</button>
-                <button class="bt" @click = "lidarBotao('8')">8</button>
-                <button class="bt" @click = "lidarBotao('9')">9</button>
-                <button class="func" @click = "lidarOperador('/')">/</button>
-            </div>
-            <div class="linha">
-                <button class="bt" @click = "lidarBotao('4')">4</button>
-                <button class="bt" @click = "lidarBotao('5')">5</button>
-                <button class="bt" @click = "lidarBotao('6')">6</button>
-                <button class="func" @click = "lidarOperador('x')">X</button>
-            </div>
-            <div class="linha">
-                <button class="bt" @click = "lidarBotao('1')">1</button>
-                <button class="bt" @click = "lidarBotao('2')">2</button>
-                <button class="bt" @click = "lidarBotao('3')">3</button>
-                <button class="func" @click = "lidarOperador('-')">-</button>
-            </div>
-            <div class="linha">
-                <button class="bt" @click = "lidarBotao('0')">0</button>
-                <button class="bt" @click = "lidarDecimal()">,</button>
-                <button class="func" @click = "lidarIgual()">=</button>
-                <button class="func" @click = "lidarOperador('+')">+</button>
-            </div>
+<div id="app">
+    <div class="calculadora">
+        <div class="marca">made in china</div>
+        <div class="display">
+            {{display}}
+        </div>
+        <div class="linha">
+            <button class="func2" @click = "lidarClear()">AC</button>
+            <button class="func2" @click = "clear()">CE</button>
+
+        </div>
+        <div class="linha">
+            <button class="func2" @click = "inverter()">+/-</button>
+            <button class="func2" @click = "vorta()"> <- </button>
+        </div>
+        <div class="linha">
+            <button class="bt" @click = "lidarBotao('7')">7</button>
+            <button class="bt" @click = "lidarBotao('8')">8</button>
+            <button class="bt" @click = "lidarBotao('9')">9</button>
+            <button class="func" @click = "lidarOperador('/')">/</button>
+        </div>
+        <div class="linha">
+            <button class="bt" @click = "lidarBotao('4')">4</button>
+            <button class="bt" @click = "lidarBotao('5')">5</button>
+            <button class="bt" @click = "lidarBotao('6')">6</button>
+            <button class="func" @click = "lidarOperador('x')">X</button>
+        </div>
+        <div class="linha">
+            <button class="bt" @click = "lidarBotao('1')">1</button>
+            <button class="bt" @click = "lidarBotao('2')">2</button>
+            <button class="bt" @click = "lidarBotao('3')">3</button>
+            <button class="func" @click = "lidarOperador('-')">-</button>
+        </div>
+        <div class="linha">
+            <button class="bt" @click = "lidarBotao('0')">0</button>
+            <button class="bt" @click = "lidarDecimal()">,</button>
+            <button class="func" @click = "lidarIgual()">=</button>
+            <button class="func" @click = "lidarOperador('+')">+</button>
         </div>
     </div>
+</div>
 </body>
 </html>
 <script src="index.js"></script>
