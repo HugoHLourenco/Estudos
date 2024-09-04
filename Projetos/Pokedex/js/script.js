@@ -246,7 +246,7 @@ form.addEventListener('submit', (event) => {
     renderPokemon(input.value.toLowerCase());
 });
 
-// Voltar -------------------------------------------------
+// Botão voltar -------------------------------------------------
 btnVolt.addEventListener('click', async () => {
     if (numPoke > 1) {
         numPoke -= 1;
@@ -254,7 +254,7 @@ btnVolt.addEventListener('click', async () => {
     }
 });
 
-// Proximo ------------------------------------------------
+// Botão próximo ------------------------------------------------
 btnProx.addEventListener('click', async () => {
     switch (geracao) {
         case "7":
