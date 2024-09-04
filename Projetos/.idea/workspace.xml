@@ -5,9 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ca1bc35b-4719-40d5-963c-eeaae2e6707f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Batalha/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Batalha/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Batalha/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,8 +38,9 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "DefaultHtmlFileTemplate": "HTML File",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "C:/Users/Hugo/Documents/Repositórios de códigos/Estudos/Projetos",
+    "last_opened_file_path": "C:/Users/1090482223016/Documents/GitHub/Estudos/Projetos/Pokedex",
     "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -68,6 +67,8 @@
       <updated>1724626043520</updated>
       <workItem from="1724626044617" duration="80000" />
       <workItem from="1724626126176" duration="810000" />
+      <workItem from="1725405582358" duration="949000" />
+      <workItem from="1725487418624" duration="207000" />
     </task>
     <servers />
   </component>
