@@ -310,7 +310,6 @@ btnShiny.addEventListener('click', async (pokemon) => {
                 pokemonImage.src = imagem
                 shiny = false;
                 btnShiny.style.color = "red";
-                return shiny;
             }
             else {
                 const imgShiny = await fetchPokemon(numPoke);
