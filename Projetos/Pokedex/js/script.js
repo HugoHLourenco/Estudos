@@ -271,53 +271,51 @@ btnVolt.addEventListener('click', async () => {
 
 // Botão próximo ------------------------------------------------
 btnProx.addEventListener('click', async () => {
+
+    const proxPoke = () => {
+        numPoke += 1;
+        renderPokemon(numPoke);
+    }
+
     switch (geracao) {
         case "8":
             if (numPoke < 1200) {
-                numPoke += 1;
-                renderPokemon(numPoke);
+                proxPoke;
             }
             break;
         case "7":
             if (numPoke < 807) {
-                numPoke += 1;
-                renderPokemon(numPoke);
+                proxPoke;
             }
             break;
         case "6":
             if (numPoke < 721) {
-                numPoke += 1;
-                renderPokemon(numPoke);
+                proxPoke;
             }
             break;
         case "5":
             if (numPoke < 649) {
-                numPoke += 1;
-                renderPokemon(numPoke);
+                proxPoke;
             }
             break;
         case "4":
             if (numPoke < 493) {
-                numPoke += 1;
-                renderPokemon(numPoke);
+                proxPoke;
             }
             break;
         case "3":
             if (numPoke < 385) {
-                numPoke += 1;
-                renderPokemon(numPoke);
+                proxPoke;
             }
             break;
         case "2":
             if (numPoke < 251) {
-                numPoke += 1;
-                renderPokemon(numPoke);
+                proxPoke;
             }
             break;
         case "1":
             if (numPoke < 151) {
-                numPoke += 1;
-                renderPokemon(numPoke);
+                proxPoke;
             }
             break;
     }
