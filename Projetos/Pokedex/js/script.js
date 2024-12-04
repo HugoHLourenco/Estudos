@@ -35,6 +35,7 @@ const renderPokemon = async (pokemon) => {
     switch (geracao) {
         // Gen 8 ---------------------------------------------
 <<<<<<< HEAD
+<<<<<<< HEAD
         case "8":
             if (data.id <= 1200 && shiny === true) {
                 puxaSprite;
@@ -62,6 +63,9 @@ const renderPokemon = async (pokemon) => {
                 missingNo;
             }
             break;
+=======
+
+>>>>>>> parent of 41dd22c (metodo puxaShiny)
 =======
 
 >>>>>>> parent of 41dd22c (metodo puxaShiny)
@@ -130,9 +134,14 @@ const renderPokemon = async (pokemon) => {
             if (data.id <= 649 && shiny === true) {
                 pokemonImage.style.display = 'block';
 <<<<<<< HEAD
+<<<<<<< HEAD
         pokemonName.innerHTML = data.name;
         pokemonNumber.innerHTML = data.id;
                 
+=======
+                pokemonName.innerHTML = data.name;
+                pokemonNumber.innerHTML = data.id;
+>>>>>>> parent of 41dd22c (metodo puxaShiny)
 =======
                 pokemonName.innerHTML = data.name;
                 pokemonNumber.innerHTML = data.id;
@@ -300,11 +309,14 @@ btnProx.addEventListener('click', async () => {
 
     switch (geracao) {
 <<<<<<< HEAD
+<<<<<<< HEAD
         case "8":
             if (numPoke < 1200) {
                 proxPoke;
             }
             break;
+=======
+>>>>>>> parent of 41dd22c (metodo puxaShiny)
 =======
 >>>>>>> parent of 41dd22c (metodo puxaShiny)
         case "7":
