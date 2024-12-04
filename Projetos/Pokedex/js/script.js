@@ -13,7 +13,7 @@ const btnGeracao = document.querySelector('.btn-geracao')
 let numPoke = 1;
 let imagem = "";
 let shiny = false;
-let geracao = "5";
+let geracao = "8";
 
 // Busca pelos pokemons ----------------------------------------
 const fetchPokemon = async (pokemon) => {
@@ -32,11 +32,23 @@ const renderPokemon = async (pokemon) => {
 
     const data = await fetchPokemon(pokemon);
 
+    const puxaSprite = () => {
+        pokemonImage.style.display = 'block';
+        pokemonName.innerHTML = data.name;
+        pokemonNumber.innerHTML = data.id;
+    }
+
+    const missingNo = () => {
+        pokemonNumber.innerHTML = "???"
+        pokemonName.innerHTML = "MissingNO."
+        pokemonImage.src = "../images/missigno.png"
+    }
+
     switch (geracao) {
         // Gen 8 ---------------------------------------------
         case "8":
-            if (data.id <= 1200 && shiny === true) {
-                puxaSprite;
+            if (data.id <= 905 && shiny === true) {
+                puxaSprite();
 
                 pokemonImage.src = data['sprites']['other']['showdown']['front_shiny'];
 
@@ -46,8 +58,8 @@ const renderPokemon = async (pokemon) => {
 
                 numPoke = data.id;
 
-            } else if (data.id <= 1200 && shiny === false) {
-                puxaSprite;
+            } else if (data.id <= 905 && shiny === false) {
+                puxaSprite();
 
                 pokemonImage.src = data['sprites']['other']['showdown']['front_default'];
 
@@ -58,15 +70,14 @@ const renderPokemon = async (pokemon) => {
                 numPoke = data.id;
 
             } else {
-                missingNo;
+                missingNo();
             }
             break;
         // Gen 7 ---------------------------------------------
         case "7":
             if (data.id <= 807 && shiny === true) {
-                pokemonImage.style.display = 'block';
-                pokemonName.innerHTML = data.name;
-                pokemonNumber.innerHTML = data.id;
+                puxaSprite();
+
                 pokemonImage.src = data['sprites']['versions']['generation-vii']['ultra-sun-ultra-moon']['front_shiny'];
 
                 input.value = "";
@@ -75,9 +86,8 @@ const renderPokemon = async (pokemon) => {
 
                 numPoke = data.id;
             } else if (data.id <= 807 && shiny === false) {
-                pokemonImage.style.display = 'block';
-                pokemonName.innerHTML = data.name;
-                pokemonNumber.innerHTML = data.id;
+                puxaSprite();
+
                 pokemonImage.src = data['sprites']['versions']['generation-vii']['ultra-sun-ultra-moon']['front_default'];
 
                 input.value = "";
@@ -86,17 +96,13 @@ const renderPokemon = async (pokemon) => {
 
                 numPoke = data.id;
             } else {
-                pokemonNumber.innerHTML = "???"
-                pokemonName.innerHTML = "MissingNO."
-                pokemonImage.src = "../images/missigno.png"
+                missingNo();
             }
             break;
         // Gen 6 ------------------------------------------------
         case "6":
             if (data.id <= 721 && shiny === true) {
-                pokemonImage.style.display = 'block';
-                pokemonName.innerHTML = data.name;
-                pokemonNumber.innerHTML = data.id;
+                puxaSprite();
                 pokemonImage.src = data['sprites']['versions']['generation-vi']['x-y']['front_shiny'];
 
                 input.value = "";
@@ -105,9 +111,7 @@ const renderPokemon = async (pokemon) => {
 
                 numPoke = data.id;
             } else if (data.id <= 721 && shiny === false) {
-                pokemonImage.style.display = 'block';
-                pokemonName.innerHTML = data.name;
-                pokemonNumber.innerHTML = data.id;
+                puxaSprite();
                 pokemonImage.src = data['sprites']['versions']['generation-vi']['x-y']['front_default'];
 
                 input.value = "";
@@ -116,17 +120,13 @@ const renderPokemon = async (pokemon) => {
 
                 numPoke = data.id;
             } else {
-                pokemonNumber.innerHTML = "???"
-                pokemonName.innerHTML = "MissingNO."
-                pokemonImage.src = "../images/missigno.png"
+                missingNo();
             }
             break;
         // Gen 5 ---------------------------------------
         case "5":
             if (data.id <= 649 && shiny === true) {
-                pokemonImage.style.display = 'block';
-                pokemonName.innerHTML = data.name;
-                pokemonNumber.innerHTML = data.id;
+                puxaSprite();
 
                 pokemonImage.src = data['sprites']['versions']['generation-v']['black-white']['animated']['front_shiny'];
 
@@ -136,9 +136,7 @@ const renderPokemon = async (pokemon) => {
 
                 numPoke = data.id;
             } else if (data.id <= 649 && shiny === false) {
-                pokemonImage.style.display = 'block';
-                pokemonName.innerHTML = data.name;
-                pokemonNumber.innerHTML = data.id;
+                puxaSprite();
                 pokemonImage.src = data['sprites']['versions']['generation-v']['black-white']['animated']['front_default'];
 
                 input.value = "";
@@ -147,17 +145,13 @@ const renderPokemon = async (pokemon) => {
 
                 numPoke = data.id;
             } else {
-                pokemonNumber.innerHTML = "???"
-                pokemonName.innerHTML = "MissingNO."
-                pokemonImage.src = "../images/missigno.png"
+                missingNo();
             }
             break
         // Gen 4 -------------------------------------
         case "4":
             if (data.id <= 493 && shiny === true) {
-                pokemonImage.style.display = 'block';
-                pokemonName.innerHTML = data.name;
-                pokemonNumber.innerHTML = data.id;
+                puxaSprite();
                 pokemonImage.src = data['sprites']['versions']['generation-iv']['platinum']['front_shiny'];
 
                 input.value = "";
@@ -166,9 +160,7 @@ const renderPokemon = async (pokemon) => {
 
                 numPoke = data.id;
             } else if (data.id <= 493 && shiny === false) {
-                pokemonImage.style.display = 'block';
-                pokemonName.innerHTML = data.name;
-                pokemonNumber.innerHTML = data.id;
+                puxaSprite();
                 pokemonImage.src = data['sprites']['versions']['generation-iv']['platinum']['front_default'];
 
                 input.value = "";
@@ -177,17 +169,13 @@ const renderPokemon = async (pokemon) => {
 
                 numPoke = data.id;
             } else {
-                pokemonNumber.innerHTML = "???"
-                pokemonName.innerHTML = "MissingNO."
-                pokemonImage.src = "../images/missigno.png"
+                missingNo();
             }
             break;
         // Gen 3 --------------------------------------------
         case "3":
             if (data.id <= 385 && shiny === true) {
-                pokemonImage.style.display = 'block';
-                pokemonName.innerHTML = data.name;
-                pokemonNumber.innerHTML = data.id;
+                puxaSprite();
                 pokemonImage.src = data['sprites']['versions']['generation-iii']['emerald']['front_shiny'];
 
                 input.value = "";
@@ -196,9 +184,7 @@ const renderPokemon = async (pokemon) => {
 
                 numPoke = data.id;
             } else if (data.id <= 385 && shiny === false) {
-                pokemonImage.style.display = 'block';
-                pokemonName.innerHTML = data.name;
-                pokemonNumber.innerHTML = data.id;
+                puxaSprite();
                 pokemonImage.src = data['sprites']['versions']['generation-iii']['emerald']['front_default'];
 
                 input.value = "";
@@ -207,17 +193,13 @@ const renderPokemon = async (pokemon) => {
 
                 numPoke = data.id;
             } else {
-                pokemonNumber.innerHTML = "???"
-                pokemonName.innerHTML = "MissingNO."
-                pokemonImage.src = "../images/missigno.png"
+                missingNo();
             }
             break;
         // Gen 2 ---------------------------------------------
         case "2":
             if (data.id <= 251 && shiny === true) {
-                pokemonImage.style.display = 'block';
-                pokemonName.innerHTML = data.name;
-                pokemonNumber.innerHTML = data.id;
+                puxaSprite();
                 pokemonImage.src = data['sprites']['versions']['generation-ii']['crystal']['front_shiny'];
 
                 input.value = "";
@@ -226,9 +208,7 @@ const renderPokemon = async (pokemon) => {
 
                 numPoke = data.id;
             } else if (data.id <= 251 && shiny === false) {
-                pokemonImage.style.display = 'block';
-                pokemonName.innerHTML = data.name;
-                pokemonNumber.innerHTML = data.id;
+                puxaSprite();
                 pokemonImage.src = data['sprites']['versions']['generation-ii']['crystal']['front_default'];
 
                 input.value = "";
@@ -237,17 +217,13 @@ const renderPokemon = async (pokemon) => {
 
                 numPoke = data.id;
             } else {
-                pokemonNumber.innerHTML = "???"
-                pokemonName.innerHTML = "MissingNO."
-                pokemonImage.src = "../images/missigno.png"
+                missingNo();
             }
             break;
         // Gen 1 ---------------------------------------------
         case "1":
             if (data.id < 152) {
-                pokemonImage.style.display = 'block';
-                pokemonName.innerHTML = data.name;
-                pokemonNumber.innerHTML = data.id;
+                puxaSprite();
                 pokemonImage.src = data['sprites']['versions']['generation-i']['red-blue']['front_default'];
 
                 input.value = "";
@@ -256,9 +232,7 @@ const renderPokemon = async (pokemon) => {
 
                 numPoke = data.id;
             } else {
-                pokemonNumber.innerHTML = "???"
-                pokemonName.innerHTML = "MissingNO."
-                pokemonImage.src = "../images/missigno.png"
+                missingNo();
             }
             break
     }
@@ -284,19 +258,19 @@ btnVolt.addEventListener('click', async () => {
 // Botão próximo ------------------------------------------------
 btnProx.addEventListener('click', async () => {
 
-    
+
     const proxPoke = () => {
         numPoke += 1;
         renderPokemon(numPoke);
     }
+
     switch (geracao) {
 
         case "8":
-            if (numPoke < 1200) {
+            if (numPoke < 905) {
                 proxPoke();
             }
             break;
-
         case "7":
             if (numPoke < 807) {
                 proxPoke();
