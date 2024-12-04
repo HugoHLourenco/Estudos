@@ -34,12 +34,10 @@ const renderPokemon = async (pokemon) => {
 
     switch (geracao) {
         // Gen 8 ---------------------------------------------
-<<<<<<< HEAD
-<<<<<<< HEAD
         case "8":
             if (data.id <= 1200 && shiny === true) {
                 puxaSprite;
-                
+
                 pokemonImage.src = data['sprites']['other']['showdown']['front_shiny'];
 
                 input.value = "";
@@ -63,12 +61,6 @@ const renderPokemon = async (pokemon) => {
                 missingNo;
             }
             break;
-=======
-
->>>>>>> parent of 41dd22c (metodo puxaShiny)
-=======
-
->>>>>>> parent of 41dd22c (metodo puxaShiny)
         // Gen 7 ---------------------------------------------
         case "7":
             if (data.id <= 807 && shiny === true) {
@@ -133,19 +125,9 @@ const renderPokemon = async (pokemon) => {
         case "5":
             if (data.id <= 649 && shiny === true) {
                 pokemonImage.style.display = 'block';
-<<<<<<< HEAD
-<<<<<<< HEAD
-        pokemonName.innerHTML = data.name;
-        pokemonNumber.innerHTML = data.id;
-                
-=======
                 pokemonName.innerHTML = data.name;
                 pokemonNumber.innerHTML = data.id;
->>>>>>> parent of 41dd22c (metodo puxaShiny)
-=======
-                pokemonName.innerHTML = data.name;
-                pokemonNumber.innerHTML = data.id;
->>>>>>> parent of 41dd22c (metodo puxaShiny)
+
                 pokemonImage.src = data['sprites']['versions']['generation-v']['black-white']['animated']['front_shiny'];
 
                 input.value = "";
@@ -302,56 +284,52 @@ btnVolt.addEventListener('click', async () => {
 // Botão próximo ------------------------------------------------
 btnProx.addEventListener('click', async () => {
 
+    
     const proxPoke = () => {
         numPoke += 1;
         renderPokemon(numPoke);
     }
-
     switch (geracao) {
-<<<<<<< HEAD
-<<<<<<< HEAD
+
         case "8":
             if (numPoke < 1200) {
-                proxPoke;
+                proxPoke();
             }
             break;
-=======
->>>>>>> parent of 41dd22c (metodo puxaShiny)
-=======
->>>>>>> parent of 41dd22c (metodo puxaShiny)
+
         case "7":
             if (numPoke < 807) {
-                proxPoke;
+                proxPoke();
             }
             break;
         case "6":
             if (numPoke < 721) {
-                proxPoke;
+                proxPoke();
             }
             break;
         case "5":
             if (numPoke < 649) {
-                proxPoke;
+                proxPoke();
             }
             break;
         case "4":
             if (numPoke < 493) {
-                proxPoke;
+                proxPoke();
             }
             break;
         case "3":
             if (numPoke < 385) {
-                proxPoke;
+                proxPoke();
             }
             break;
         case "2":
             if (numPoke < 251) {
-                proxPoke;
+                proxPoke();
             }
             break;
         case "1":
             if (numPoke < 151) {
-                proxPoke;
+                proxPoke();
             }
             break;
     }
@@ -376,85 +354,85 @@ btnShiny.addEventListener('click', async (pokemon) => {
     switch (geracao) {
         case "8":
             if (pokemonImage.src !== imagem) {
-                mudaCorBotaoVermelho;
+                mudaCorBotaoVermelho();
             }
             else {
                 const imgShiny = await fetchPokemon(numPoke);
                 if (imgShiny) {
                     pokemonImage.src = imgShiny['sprites']['other']['showdown']['front_shiny'];
-                    mudaCorBotaoVerde;
+                    mudaCorBotaoVerde();
                 }
             }
             break;
         case "7":
             if (pokemonImage.src !== imagem) {
-                mudaCorBotaoVermelho;
+                mudaCorBotaoVermelho();
             }
             else {
                 const imgShiny = await fetchPokemon(numPoke);
                 if (imgShiny) {
                     pokemonImage.src = imgShiny['sprites']['versions']['generation-vii']['ultra-sun-ultra-moon']['front_shiny'];
-                    mudaCorBotaoVerde;
+                    mudaCorBotaoVerde();
                 }
             }
             break;
         case "6":
             if (pokemonImage.src !== imagem) {
-                mudaCorBotaoVermelho;
+                mudaCorBotaoVermelho();
             }
             else {
                 const imgShiny = await fetchPokemon(numPoke);
                 if (imgShiny) {
                     pokemonImage.src = imgShiny['sprites']['versions']['generation-vi']['x-y']['front_shiny'];
-                    mudaCorBotaoVerde;
+                    mudaCorBotaoVerde();
                 }
             }
             break;
         case "5":
             if (pokemonImage.src !== imagem) {
-                mudaCorBotaoVermelho;
+                mudaCorBotaoVermelho();
             }
             else {
                 const imgShiny = await fetchPokemon(numPoke);
                 if (imgShiny) {
                     pokemonImage.src = imgShiny['sprites']['versions']['generation-v']['black-white']['animated']['front_shiny'];
-                    mudaCorBotaoVerde;
+                    mudaCorBotaoVerde();
                 }
             }
             break
         case "4":
             if (pokemonImage.src !== imagem) {
-                mudaCorBotaoVermelho;
+                mudaCorBotaoVermelho();
             }
             else {
                 const imgShiny = await fetchPokemon(numPoke);
                 if (imgShiny) {
                     pokemonImage.src = imgShiny['sprites']['versions']['generation-iv']['platinum']['front_shiny'];
-                    mudaCorBotaoVerde;
+                    mudaCorBotaoVerde();
                 }
             }
             break
         case "3":
             if (pokemonImage.src !== imagem) {
-                mudaCorBotaoVermelho;
+                mudaCorBotaoVermelho();
             }
             else {
                 const imgShiny = await fetchPokemon(numPoke);
                 if (imgShiny) {
                     pokemonImage.src = imgShiny['sprites']['versions']['generation-iii']['emerald']['front_shiny'];
-                    mudaCorBotaoVerde;
+                    mudaCorBotaoVerde();
                 }
             }
             break
         case "2":
             if (pokemonImage.src !== imagem) {
-                mudaCorBotaoVermelho;
+                mudaCorBotaoVermelho();
             }
             else {
                 const imgShiny = await fetchPokemon(numPoke);
                 if (imgShiny) {
                     pokemonImage.src = imgShiny['sprites']['versions']['generation-ii']['crystal']['front_shiny'];
-                    mudaCorBotaoVerde;
+                    mudaCorBotaoVerde();
                 }
             }
             break;
