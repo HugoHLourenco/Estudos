@@ -15,7 +15,6 @@ let imagem = "";
 let shiny = false;
 let geracao = "5";
 
-
 // Busca pelos pokemons ----------------------------------------
 const fetchPokemon = async (pokemon) => {
     const APIResponse = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemon}`);
@@ -33,22 +32,9 @@ const renderPokemon = async (pokemon) => {
 
     const data = await fetchPokemon(pokemon);
 
-    // Método que puxa os sprites -----------------------------------------------
-    const puxaSprite = () => {
-        pokemonImage.style.display = 'block';
-        pokemonName.innerHTML = data.name;
-        pokemonNumber.innerHTML = data.id;
-    }
-
-    // Método de busca falha ---------------------------------------------------------
-    const missingNo = () => {
-        pokemonNumber.innerHTML = "???"
-        pokemonName.innerHTML = "MissingNO."
-        pokemonImage.src = "../images/missigno.png"
-    }
-
     switch (geracao) {
         // Gen 8 ---------------------------------------------
+<<<<<<< HEAD
         case "8":
             if (data.id <= 1200 && shiny === true) {
                 puxaSprite;
@@ -76,11 +62,15 @@ const renderPokemon = async (pokemon) => {
                 missingNo;
             }
             break;
+=======
+
+>>>>>>> parent of 41dd22c (metodo puxaShiny)
         // Gen 7 ---------------------------------------------
         case "7":
             if (data.id <= 807 && shiny === true) {
-                puxaSprite;
-
+                pokemonImage.style.display = 'block';
+                pokemonName.innerHTML = data.name;
+                pokemonNumber.innerHTML = data.id;
                 pokemonImage.src = data['sprites']['versions']['generation-vii']['ultra-sun-ultra-moon']['front_shiny'];
 
                 input.value = "";
@@ -89,8 +79,9 @@ const renderPokemon = async (pokemon) => {
 
                 numPoke = data.id;
             } else if (data.id <= 807 && shiny === false) {
-                puxaSprite;
-
+                pokemonImage.style.display = 'block';
+                pokemonName.innerHTML = data.name;
+                pokemonNumber.innerHTML = data.id;
                 pokemonImage.src = data['sprites']['versions']['generation-vii']['ultra-sun-ultra-moon']['front_default'];
 
                 input.value = "";
@@ -99,14 +90,17 @@ const renderPokemon = async (pokemon) => {
 
                 numPoke = data.id;
             } else {
-                missingNo;
+                pokemonNumber.innerHTML = "???"
+                pokemonName.innerHTML = "MissingNO."
+                pokemonImage.src = "../images/missigno.png"
             }
             break;
         // Gen 6 ------------------------------------------------
         case "6":
             if (data.id <= 721 && shiny === true) {
-                puxaSprite;
-
+                pokemonImage.style.display = 'block';
+                pokemonName.innerHTML = data.name;
+                pokemonNumber.innerHTML = data.id;
                 pokemonImage.src = data['sprites']['versions']['generation-vi']['x-y']['front_shiny'];
 
                 input.value = "";
@@ -115,8 +109,9 @@ const renderPokemon = async (pokemon) => {
 
                 numPoke = data.id;
             } else if (data.id <= 721 && shiny === false) {
-                puxaSprite;
-
+                pokemonImage.style.display = 'block';
+                pokemonName.innerHTML = data.name;
+                pokemonNumber.innerHTML = data.id;
                 pokemonImage.src = data['sprites']['versions']['generation-vi']['x-y']['front_default'];
 
                 input.value = "";
@@ -125,17 +120,23 @@ const renderPokemon = async (pokemon) => {
 
                 numPoke = data.id;
             } else {
-                missingNo;
-
+                pokemonNumber.innerHTML = "???"
+                pokemonName.innerHTML = "MissingNO."
+                pokemonImage.src = "../images/missigno.png"
             }
             break;
         // Gen 5 ---------------------------------------
         case "5":
             if (data.id <= 649 && shiny === true) {
                 pokemonImage.style.display = 'block';
+<<<<<<< HEAD
         pokemonName.innerHTML = data.name;
         pokemonNumber.innerHTML = data.id;
                 
+=======
+                pokemonName.innerHTML = data.name;
+                pokemonNumber.innerHTML = data.id;
+>>>>>>> parent of 41dd22c (metodo puxaShiny)
                 pokemonImage.src = data['sprites']['versions']['generation-v']['black-white']['animated']['front_shiny'];
 
                 input.value = "";
@@ -144,8 +145,9 @@ const renderPokemon = async (pokemon) => {
 
                 numPoke = data.id;
             } else if (data.id <= 649 && shiny === false) {
-                puxaSprite;
-
+                pokemonImage.style.display = 'block';
+                pokemonName.innerHTML = data.name;
+                pokemonNumber.innerHTML = data.id;
                 pokemonImage.src = data['sprites']['versions']['generation-v']['black-white']['animated']['front_default'];
 
                 input.value = "";
@@ -154,14 +156,17 @@ const renderPokemon = async (pokemon) => {
 
                 numPoke = data.id;
             } else {
-                missingNo;
+                pokemonNumber.innerHTML = "???"
+                pokemonName.innerHTML = "MissingNO."
+                pokemonImage.src = "../images/missigno.png"
             }
             break
         // Gen 4 -------------------------------------
         case "4":
             if (data.id <= 493 && shiny === true) {
-                puxaSprite;
-
+                pokemonImage.style.display = 'block';
+                pokemonName.innerHTML = data.name;
+                pokemonNumber.innerHTML = data.id;
                 pokemonImage.src = data['sprites']['versions']['generation-iv']['platinum']['front_shiny'];
 
                 input.value = "";
@@ -170,8 +175,9 @@ const renderPokemon = async (pokemon) => {
 
                 numPoke = data.id;
             } else if (data.id <= 493 && shiny === false) {
-                puxaSprite;
-
+                pokemonImage.style.display = 'block';
+                pokemonName.innerHTML = data.name;
+                pokemonNumber.innerHTML = data.id;
                 pokemonImage.src = data['sprites']['versions']['generation-iv']['platinum']['front_default'];
 
                 input.value = "";
@@ -180,14 +186,17 @@ const renderPokemon = async (pokemon) => {
 
                 numPoke = data.id;
             } else {
-                missingNo;
+                pokemonNumber.innerHTML = "???"
+                pokemonName.innerHTML = "MissingNO."
+                pokemonImage.src = "../images/missigno.png"
             }
             break;
         // Gen 3 --------------------------------------------
         case "3":
             if (data.id <= 385 && shiny === true) {
-                puxaSprite;
-
+                pokemonImage.style.display = 'block';
+                pokemonName.innerHTML = data.name;
+                pokemonNumber.innerHTML = data.id;
                 pokemonImage.src = data['sprites']['versions']['generation-iii']['emerald']['front_shiny'];
 
                 input.value = "";
@@ -196,8 +205,9 @@ const renderPokemon = async (pokemon) => {
 
                 numPoke = data.id;
             } else if (data.id <= 385 && shiny === false) {
-                puxaSprite;
-
+                pokemonImage.style.display = 'block';
+                pokemonName.innerHTML = data.name;
+                pokemonNumber.innerHTML = data.id;
                 pokemonImage.src = data['sprites']['versions']['generation-iii']['emerald']['front_default'];
 
                 input.value = "";
@@ -206,14 +216,17 @@ const renderPokemon = async (pokemon) => {
 
                 numPoke = data.id;
             } else {
-                missingNo;
+                pokemonNumber.innerHTML = "???"
+                pokemonName.innerHTML = "MissingNO."
+                pokemonImage.src = "../images/missigno.png"
             }
             break;
         // Gen 2 ---------------------------------------------
         case "2":
             if (data.id <= 251 && shiny === true) {
-                puxaSprite;
-
+                pokemonImage.style.display = 'block';
+                pokemonName.innerHTML = data.name;
+                pokemonNumber.innerHTML = data.id;
                 pokemonImage.src = data['sprites']['versions']['generation-ii']['crystal']['front_shiny'];
 
                 input.value = "";
@@ -222,8 +235,9 @@ const renderPokemon = async (pokemon) => {
 
                 numPoke = data.id;
             } else if (data.id <= 251 && shiny === false) {
-                puxaSprite;
-
+                pokemonImage.style.display = 'block';
+                pokemonName.innerHTML = data.name;
+                pokemonNumber.innerHTML = data.id;
                 pokemonImage.src = data['sprites']['versions']['generation-ii']['crystal']['front_default'];
 
                 input.value = "";
@@ -232,14 +246,17 @@ const renderPokemon = async (pokemon) => {
 
                 numPoke = data.id;
             } else {
-                missingNo;
+                pokemonNumber.innerHTML = "???"
+                pokemonName.innerHTML = "MissingNO."
+                pokemonImage.src = "../images/missigno.png"
             }
             break;
         // Gen 1 ---------------------------------------------
         case "1":
             if (data.id < 152) {
-                puxaSprite;
-
+                pokemonImage.style.display = 'block';
+                pokemonName.innerHTML = data.name;
+                pokemonNumber.innerHTML = data.id;
                 pokemonImage.src = data['sprites']['versions']['generation-i']['red-blue']['front_default'];
 
                 input.value = "";
@@ -248,7 +265,9 @@ const renderPokemon = async (pokemon) => {
 
                 numPoke = data.id;
             } else {
-                missingNo;
+                pokemonNumber.innerHTML = "???"
+                pokemonName.innerHTML = "MissingNO."
+                pokemonImage.src = "../images/missigno.png"
             }
             break
     }
@@ -280,11 +299,14 @@ btnProx.addEventListener('click', async () => {
     }
 
     switch (geracao) {
+<<<<<<< HEAD
         case "8":
             if (numPoke < 1200) {
                 proxPoke;
             }
             break;
+=======
+>>>>>>> parent of 41dd22c (metodo puxaShiny)
         case "7":
             if (numPoke < 807) {
                 proxPoke;
@@ -387,7 +409,7 @@ btnShiny.addEventListener('click', async (pokemon) => {
                     mudaCorBotaoVerde;
                 }
             }
-            break;
+            break
         case "4":
             if (pokemonImage.src !== imagem) {
                 mudaCorBotaoVermelho;
