@@ -323,105 +323,102 @@ btnProx.addEventListener('click', async () => {
 
 // Botão dos Shinys ----------------------------------------
 btnShiny.addEventListener('click', async (pokemon) => {
+
+    const mudaCorBotaoVermelho = () => {
+        pokemonImage.src = imagem
+        shiny = false;
+        btnShiny.style.color = "red";
+        return shiny;
+    }
+
+    const mudaCorBotaoVerde = () => {
+        shiny = true;
+        btnShiny.style.color = "green";
+        return shiny;
+    }
+
     switch (geracao) {
+        case "8":
+            if (pokemonImage.src !== imagem) {
+                mudaCorBotaoVermelho;
+            }
+            else {
+                const imgShiny = await fetchPokemon(numPoke);
+                if (imgShiny) {
+                    pokemonImage.src = imgShiny['sprites']['other']['showdown']['front_shiny'];
+                    mudaCorBotaoVerde;
+                }
+            }
+            break;
         case "7":
             if (pokemonImage.src !== imagem) {
-                pokemonImage.src = imagem
-                shiny = false;
-                btnShiny.style.color = "red";
+                mudaCorBotaoVermelho;
             }
             else {
                 const imgShiny = await fetchPokemon(numPoke);
                 if (imgShiny) {
                     pokemonImage.src = imgShiny['sprites']['versions']['generation-vii']['ultra-sun-ultra-moon']['front_shiny'];
-                    shiny = true;
-                    btnShiny.style.color = "green";
-                    return shiny;
+                    mudaCorBotaoVerde;
                 }
             }
             break;
         case "6":
             if (pokemonImage.src !== imagem) {
-                pokemonImage.src = imagem
-                shiny = false;
-                btnShiny.style.color = "red";
-                return shiny;
+                mudaCorBotaoVermelho;
             }
             else {
                 const imgShiny = await fetchPokemon(numPoke);
                 if (imgShiny) {
                     pokemonImage.src = imgShiny['sprites']['versions']['generation-vi']['x-y']['front_shiny'];
-                    shiny = true;
-                    btnShiny.style.color = "green";
-                    return shiny;
+                    mudaCorBotaoVerde;
                 }
             }
             break;
         case "5":
             if (pokemonImage.src !== imagem) {
-                pokemonImage.src = imagem
-                shiny = false;
-                btnShiny.style.color = "red";
-                return shiny;
+                mudaCorBotaoVermelho;
             }
             else {
                 const imgShiny = await fetchPokemon(numPoke);
                 if (imgShiny) {
                     pokemonImage.src = imgShiny['sprites']['versions']['generation-v']['black-white']['animated']['front_shiny'];
-                    shiny = true;
-                    btnShiny.style.color = "green";
-                    return shiny;
+                    mudaCorBotaoVerde;
                 }
             }
             break;
         case "4":
             if (pokemonImage.src !== imagem) {
-                pokemonImage.src = imagem
-                shiny = false;
-                btnShiny.style.color = "red";
-                return shiny;
+                mudaCorBotaoVermelho;
             }
             else {
                 const imgShiny = await fetchPokemon(numPoke);
                 if (imgShiny) {
                     pokemonImage.src = imgShiny['sprites']['versions']['generation-iv']['platinum']['front_shiny'];
-                    shiny = true;
-                    btnShiny.style.color = "green";
-                    return shiny;
+                    mudaCorBotaoVerde;
                 }
             }
             break
         case "3":
             if (pokemonImage.src !== imagem) {
-                pokemonImage.src = imagem
-                shiny = false;
-                btnShiny.style.color = "red";
-                return shiny;
+                mudaCorBotaoVermelho;
             }
             else {
                 const imgShiny = await fetchPokemon(numPoke);
                 if (imgShiny) {
                     pokemonImage.src = imgShiny['sprites']['versions']['generation-iii']['emerald']['front_shiny'];
-                    shiny = true;
-                    btnShiny.style.color = "green";
-                    return shiny;
+                    mudaCorBotaoVerde;
                 }
             }
             break
         case "2":
             if (pokemonImage.src !== imagem) {
-                pokemonImage.src = imagem
-                shiny = false;
-                btnShiny.style.color = "red";
-                return shiny;
+                mudaCorBotaoVermelho;
             }
             else {
                 const imgShiny = await fetchPokemon(numPoke);
                 if (imgShiny) {
                     pokemonImage.src = imgShiny['sprites']['versions']['generation-ii']['crystal']['front_shiny'];
-                    shiny = true;
-                    btnShiny.style.color = "green";
-                    return shiny;
+                    mudaCorBotaoVerde;
                 }
             }
             break;
