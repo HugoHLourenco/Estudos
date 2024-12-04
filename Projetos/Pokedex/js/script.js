@@ -52,7 +52,7 @@ const renderPokemon = async (pokemon) => {
         case "8":
             if (data.id <= 1200 && shiny === true) {
                 puxaSprite;
-
+                
                 pokemonImage.src = data['sprites']['other']['showdown']['front_shiny'];
 
                 input.value = "";
@@ -132,8 +132,10 @@ const renderPokemon = async (pokemon) => {
         // Gen 5 ---------------------------------------
         case "5":
             if (data.id <= 649 && shiny === true) {
-                puxaSprite;
-
+                pokemonImage.style.display = 'block';
+        pokemonName.innerHTML = data.name;
+        pokemonNumber.innerHTML = data.id;
+                
                 pokemonImage.src = data['sprites']['versions']['generation-v']['black-white']['animated']['front_shiny'];
 
                 input.value = "";
@@ -424,7 +426,6 @@ btnShiny.addEventListener('click', async (pokemon) => {
             break;
     }
 })
-
 
 // Mudar Geração --------------------------------------------
 btnGeracao.addEventListener('click', () => {
