@@ -47,4 +47,14 @@ function diagonalInversa(num) {
         console.log(" ".repeat(num - i) + "*")
     }
 }
-diagonalInversa(50)
+diagonalInversa(0)
+
+// Teorema de Pitagoras ---------------------------------------------------------------------------------------------------------------------
+
+function teoremaPitagoras(a, b) {
+    let c = a*a + b*b
+    let hipotenusa = Math.sqrt(c).toFixed(1)
+
+    console.log(`A hipotenusa de um triângulo com lado A(${a}), e lado B(${b}) é = ${hipotenusa}`)
+}
+teoremaPitagoras(20 , 40)
