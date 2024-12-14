@@ -1,11 +1,12 @@
-function imprimirTrianguloRetangulo(altura) {
+function TrianguloRetangulo(altura) {
     for (let i = 1; i <= altura ; i++) {
-        console.log("*".repeat(i));
+        console.log("*".repeat(i))
     }
 }
+TrianguloRetangulo(0);
 
-// Exemplo: Triângulo com altura 5
-imprimirTrianguloRetangulo(0);
+
+
 
 
 function quadrado( lado ) {
@@ -13,5 +14,34 @@ function quadrado( lado ) {
         console.log("*".repeat(lado))
     }
 }
+quadrado(0)
 
-quadrado(10)
+
+
+
+function trianguloInvertido(lado) {
+    for(let i = 1; i <= lado; i++) {
+        console.log("*".repeat(lado - i + 1))
+    }
+}
+trianguloInvertido(0)
+
+
+
+
+function diagonal(num) {
+    for(let i = 0; i <= num; i++) {
+        console.log(" ".repeat(i ) + "*")
+    }
+}
+diagonal(0)
+
+
+
+
+function diagonalInversa(num) {
+    for(let i = 0; i <= num; i++) {
+        console.log(" ".repeat(num - i) + "*")
+    }
+}
+diagonalInversa(50)
