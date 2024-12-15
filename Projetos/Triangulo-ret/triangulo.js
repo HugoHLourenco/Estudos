@@ -64,11 +64,25 @@ function teoremaPitagoras(a, b) {
 
 // Área de um círculo -----------------------------------------------------------------------------------------------------------------------------------
 
-const AreaCirc = (r) => {
+const areaCirc = (r) => {
     let pi = 3.141592
-    let area= pi * r * r
+    let area= pi * Math.pow(r, 2)
 
     console.log(`A área de um círculo de Raio(${r}) é: ${area.toFixed(2)} U.M.`)
 }
 
-// AreaCirc(2)
+// areaCirc(2)
+
+
+
+
+// Área de um esfera ----------------------------------------------------------------------------------------------------------------------------
+
+const areaEsf = (r) => {
+    let pi = 3.141592
+    let area= 4 * pi * Math.pow(r, 2)
+
+    console.log(`A área de uma esfera de Raio(${r}) é: ${area.toFixed(2)} U.M.²`)
+}
+
+// areaEsf(2)
