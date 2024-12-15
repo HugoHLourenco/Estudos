@@ -58,3 +58,6 @@ function teoremaPitagoras(a, b) {
     console.log(`A hipotenusa de um triângulo com lado A(${a}), e lado B(${b}) é = ${hipotenusa}`)
 }
 teoremaPitagoras(20 , 40)
+
+
+
