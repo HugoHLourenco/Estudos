@@ -57,6 +57,7 @@ function teoremaPitagoras(a, b) {
 
     console.log(`A hipotenusa de um triângulo com lado A(${a}), e lado B(${b}) é = ${hipotenusa}`)
 }
+
 // teoremaPitagoras(20, 33)
 
 
@@ -70,4 +71,4 @@ const AreaCirc = (r) => {
     console.log(`A área de um círculo de Raio(${r}) é: ${area.toFixed(2)} U.M.`)
 }
 
-AreaCirc(2)
+// AreaCirc(2)
