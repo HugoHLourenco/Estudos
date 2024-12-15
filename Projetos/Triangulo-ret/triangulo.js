@@ -67,5 +67,5 @@ const AreaCirc = (r) => {
     let pi = 3.141592
     let area = pi * r.Math.pow(2)
 
-    console.log
+    console.log(`A área de um círculo de Raio(${r}) é`)
 }
