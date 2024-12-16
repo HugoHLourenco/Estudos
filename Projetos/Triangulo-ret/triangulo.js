@@ -85,5 +85,4 @@ const areaEsf = (r) => {
     console.log(`A área de uma esfera de Raio(${r}) é: ${area.toFixed(2)} U.M.²`)
 }
 
-
 // areaEsf(2)
