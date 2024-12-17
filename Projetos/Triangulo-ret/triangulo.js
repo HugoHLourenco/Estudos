@@ -91,5 +91,15 @@ const areaEsf = (r) => {
 // Sequência de Fibonacci -----------------------------------------------------------------------------------------------------------------------
 
 const fibonacci = (n) => {
-    let num
+    let num = 1
+    let seq = []
+
+    for(let i = 0; i < n; i++) {
+        num += num
+        seq += `${num}; `
+    }
+    console.log(`A sequência de Fibonacci até o ${n}° número é: \n
+                ${seq}`)
 }
+
+fibonacci(2)
