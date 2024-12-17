@@ -107,4 +107,4 @@ const fibonacci = (n) => {
     ${seq}`)
 }
 
-fibonacci(50)
+// fibonacci(50)
