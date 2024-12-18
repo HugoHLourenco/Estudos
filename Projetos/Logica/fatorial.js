@@ -7,4 +7,4 @@ const fatorial = (n) => {
     console.log(`${n}! é: ${res}`)
 }
 
-fatorial(20)
+fatorial(28)
