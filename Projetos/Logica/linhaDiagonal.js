@@ -3,4 +3,4 @@ function diagonal(num) {
         console.log(" ".repeat(i ) + "*")
     }
 }
-diagonal(0)
+diagonal(70)

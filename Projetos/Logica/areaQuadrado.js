@@ -3,4 +3,4 @@ function quadrado( lado ) {
         console.log("*".repeat(lado))
     }
 }
-quadrado(0)
+quadrado(3)
