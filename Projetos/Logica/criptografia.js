@@ -1,5 +1,8 @@
 const criptogradiaAlfabeto = (string) => {
-    let caracter = string.split('')
+    
+    
+    
+    let caracter = string.toLowerCase().split('')
 
     var stringCripto = []
 
@@ -92,4 +95,4 @@ const criptogradiaAlfabeto = (string) => {
     console.log(`'${string}' criptografado é: ${stringCripto}`)
 }
 
-criptogradiaAlfabeto("panqueca()")
+criptogradiaAlfabeto("panqAAAAueca")
