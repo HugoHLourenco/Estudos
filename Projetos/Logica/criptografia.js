@@ -84,6 +84,7 @@ const criptogradiaAlfabeto = (string) => {
                 stringCripto.push(26)
                 break
             default:
+                stringCripto.push(caracter[i])
                 break
             }
         }
@@ -91,4 +92,4 @@ const criptogradiaAlfabeto = (string) => {
     console.log(`'${string}' criptografado é: ${stringCripto}`)
 }
 
-criptogradiaAlfabeto("batata")
+criptogradiaAlfabeto("panqueca()")
