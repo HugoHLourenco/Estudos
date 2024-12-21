@@ -1,7 +1,5 @@
 const criptogradiaAlfabeto = (string) => {
     
-    
-    
     let caracter = string.toLowerCase().split('')
 
     var stringCripto = []
