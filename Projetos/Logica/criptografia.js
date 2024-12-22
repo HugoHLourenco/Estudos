@@ -4,6 +4,7 @@ const criptogradiaAlfabeto = (string) => {
 
     var stringCripto = []
 
+    
     for(let i = 0; i <= caracter.length; i++) {
         switch(caracter[i]){
             case "a":
