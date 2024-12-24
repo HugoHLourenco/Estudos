@@ -90,8 +90,7 @@ const criptogradiaAlfabeto = (string) => {
             }
         }
         
-        
-    console.log(`'${string}' criptografado é: ${stringCripto}`)
 
+    console.log(`'${string}' criptografado é: ${stringCripto}`)
 }
 criptogradiaAlfabeto("panqAAAAueca")
