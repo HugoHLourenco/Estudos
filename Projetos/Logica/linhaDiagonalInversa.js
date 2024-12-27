@@ -3,4 +3,5 @@ function diagonalInversa(num) {
         console.log(" ".repeat(num - i) + "*")
     }
 }
+
 diagonalInversa(80)
