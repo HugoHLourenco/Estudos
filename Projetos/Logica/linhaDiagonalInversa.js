@@ -4,4 +4,5 @@ function diagonalInversa(num) {
     }
 }
 
+
 diagonalInversa(80)
