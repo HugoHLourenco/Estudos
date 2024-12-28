@@ -13,4 +13,5 @@ const calculoQuadratico = (a, b, c) => {
     }
 }
 
+
 calculoQuadratico(10, 0, 10)
