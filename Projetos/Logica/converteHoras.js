@@ -7,4 +7,4 @@ const converteHoras = (h, m, s)  => {
     console.log(`${h} horas, ${m} minutos e ${s} segundos são: ${soma} segundos`)
 }
 
-converteHoras(7, 48, 33)
+converteHoras(1, 1, 30)
