@@ -5,11 +5,11 @@ const sort = (input) => {
         array[i] = input.charAt(i)
     }
 
-    let fim = array.length
+    var fim = array.length
 
 // Manipular a string
-    for(let i = 0; array[0] <= array[fim]; i++) {
-        if(array[i] > array[i + 1]) {
+    for(let i = 0; array[0] <= array[array.length]; i++) {
+        if(array[0] > array[i + 1]) {
             let x = ""
             x = array[i + 1]
             array[i + 1] = array[i]
@@ -20,4 +20,4 @@ const sort = (input) => {
     console.log(array)
 }
 
-sort("54321")
+sort("398542")
