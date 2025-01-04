@@ -1,9 +1,15 @@
 const sort = (input) => {
     let array = []
 
-    for(let i = 0; i <= array.length; i++) {
-        array += input.charAt[i]
+    // array = input.charAt(1)
+
+
+
+    for(let i = 0; input[i] != null; i++) {
+        array[i] = input.charAt(i)
     }
 
     console.log(array)
 }
+
+sort("asassas")
