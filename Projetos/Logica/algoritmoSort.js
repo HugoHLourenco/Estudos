@@ -4,18 +4,24 @@ const sort = (input) => {
     for(let i = 0; input[i] != null; i++) {
         array[i] = input.charAt(i)
     }
-
-    var fim = array.length
-
+    console.log(array)
 // Manipular a string
-    for(let i = 0; array[0] <= array[array.length]; i++) {
-        if(array[0] > array[i + 1]) {
+ordena()
+
+function ordena() {
+    for(let i = 0; array[i] > array[array.length - 1]; i++) {
+        if(array[i] > array[i + 1]) {
             let x = ""
             x = array[i + 1]
             array[i + 1] = array[i]
             array[i] = x
         }
     }
+
+    if (array[0] > array[1] || array[array.length - 2] > array[array.length - 1]) {
+        ordena()
+    }
+}
 
     console.log(array)
 }
