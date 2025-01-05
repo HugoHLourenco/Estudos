@@ -10,24 +10,23 @@ const sort = (input) => {
 ordena()
 
 function ordena() {
-    let cont = 0
-    let  i = 0
 
-    for(i = 0; array[i] > array[array.length - 1]; i++) {
+    for(let i = 0; array[i] > array[array.length - 1]; i++) {
+        let cont = 0
+
         if(array[i] > array[i + 1]) {
             let x = ""
+
             x = array[i + 1]
             array[i + 1] = array[i]
             array[i] = x
-        }
-
-        cont ++
-
-        if (i > cont) {
-            ordena()
+            cont ++
+    
+            if (i > cont) {
+                ordena()
+            }
         }
     }
-
 }
 
     console.log(array)
