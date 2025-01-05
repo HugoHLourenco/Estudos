@@ -28,7 +28,6 @@ function ordena() {
         }
     }
 }
-
     console.log(array)
 }
 
