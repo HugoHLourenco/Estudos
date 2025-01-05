@@ -11,22 +11,22 @@ ordena()
 
 function ordena() {
 
-    for(let i = 0; array[i] > array[array.length - 1]; i++) {
-        let cont = 0
+    // for(let i = 0; array[i] > array[array.length - 1]; i++) {
+    //     let cont = 0
 
-        if(array[i] > array[i + 1]) {
-            let x = ""
+    //     if(array[i] > array[i + 1]) {
+    //         let x = ""
 
-            x = array[i + 1]
-            array[i + 1] = array[i]
-            array[i] = x
-            cont ++
+    //         x = array[i + 1]
+    //         array[i + 1] = array[i]
+    //         array[i] = x
+    //         cont ++
     
-            if (i > cont) {
-                ordena()
-            }
-        }
-    }
+    //         if (i > cont) {
+    //             ordena()
+    //         }
+    //     }
+    // }
 }
     console.log(array)
 }
