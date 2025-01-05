@@ -11,6 +11,7 @@ ordena()
 
 function ordena() {
 
+    
     // for(let i = 0; array[i] > array[array.length - 1]; i++) {
     //     let cont = 0
 
