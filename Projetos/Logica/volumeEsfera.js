@@ -6,5 +6,4 @@ const volEsfera = (r) => {
     console.log(`Uma esfera com ${r}cm de raio tem volume de ${Math.round(res * 100) / 100}cm³`)
 } 
 
-
 volEsfera(6)
