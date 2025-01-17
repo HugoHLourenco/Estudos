@@ -1,0 +1,11 @@
+{
+    "manifest_version": 3,
+    "name": "Mudar Cor de Fundo",
+    "version": "1.0",
+    "description": "Clique no botão para mudar a cor de fundo da página.",
+    "permissions": ["activeTab", "scripting"],
+    "action": {
+        "default_popup": "popup.html",
+        "default_icon": "icon.png"
+    }
+}
