@@ -7,5 +7,4 @@ const areaCirc = (r) => {
 
 
 
-
 areaCirc(67)
