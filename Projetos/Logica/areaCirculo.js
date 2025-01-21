@@ -5,5 +5,4 @@ const areaCirc = (r) => {
     console.log(`A área de um círculo de Raio(${r}) é: ${area.toFixed(2)} U.M.²`)
 }
 
-
 areaCirc(67)
