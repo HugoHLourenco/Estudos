@@ -12,6 +12,4 @@ const calculoQuadratico = (a, b, c) => {
         console.log("Não há raizes para esta expressão")
     }
 }
-
-
 calculoQuadratico(10, 1, 10)
