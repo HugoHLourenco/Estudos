@@ -1,0 +1,3 @@
+const jokenpo = (mao) =>{
+    
+}
