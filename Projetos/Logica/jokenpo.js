@@ -34,5 +34,5 @@ const jokenpo = (mao) =>{
     }
 }
 
-jokenpo()
+jokenpo(2)
 
