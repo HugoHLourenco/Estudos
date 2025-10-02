@@ -38,7 +38,9 @@ const jokenpo = (mao) =>{
         }
         break
     }
-
 }
 
+// 1 == Pedra
+// 2 == Papel
+// 3 == Tesoura
 jokenpo(3)
