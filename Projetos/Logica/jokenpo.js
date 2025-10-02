@@ -1,5 +1,5 @@
 const jokenpo = (mao) =>{
-    var randow = Math.floor(Math.random() * 3) + 1
+    let randow = Math.floor(Math.random() * 3) + 1
 
     switch(mao) {
         case 1:
@@ -34,11 +34,5 @@ const jokenpo = (mao) =>{
     }
 }
 
-function comparador() {
+jokenpo()
 
-}
-
-// 1 == Pedra
-// 2 == Papel
-// 3 == Tesoura
-jokenpo(3)
