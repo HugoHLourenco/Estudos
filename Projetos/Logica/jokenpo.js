@@ -9,8 +9,6 @@ const jokenpo = (mao) =>{
             console.log(`Pedra contra Papel\nDERROTA`)
         } else if(randow == 3) {
             console.log(`Pedra contra Tesoura\nVITÓRIA`)
-        } else {
-            console.log("Escolha um valor válido")
         }
         break
 
@@ -21,9 +19,7 @@ const jokenpo = (mao) =>{
             console.log(`Papel contra Papel\nEMPATE`)
         } else if(randow == 3) {
             console.log(`Papel contra Tesoura\nDERROTA`)
-        } else {
-            console.log("Escolha um valor válido")
-        }
+        } 
         break
 
         case 3:
@@ -33,11 +29,13 @@ const jokenpo = (mao) =>{
             console.log(`Tesoura contra Papel\nVITÓRIA`)
         } else if(randow == 3) {
             console.log(`Tesoura contra Tesoura\nEMPATE`)
-        } else {
-            console.log("Escolha um valor válido")
         }
         break
     }
+}
+
+function comparador() {
+
 }
 
 // 1 == Pedra
