@@ -6,4 +6,4 @@ const calcPorcent = (a, b) => {
 }
 
 // a é primeiro número e b é o valor total
-calcPorcent(122, 66)
+calcPorcent(100, 10)
