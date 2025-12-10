@@ -1,8 +1,11 @@
 const func = (n) => {
     var stringRES = ""
-    for(i = 0; i <= n.length; i++){
-        stringRES = n[1]
-    }
+
+    stringRES = n[3]
+    // for(i = 0; i <= n.length; i++){
+    //     stringRES = n.charAt(i)
+    // }
+
     console.log(stringRES)
 }
 
