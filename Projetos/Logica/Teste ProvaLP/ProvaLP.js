@@ -1,19 +1,25 @@
-var lado1 = document.getElementById("lado1")
-var lado2 = document.getElementById("lado2")
-var lado3 = document.getElementById("lado3")
-
 function IdentificarTriangulo() {
-    let TipoDoTriangulo = ""
+    let lado1 = Number(document.getElementById("lado1").value);
+    let lado2 = Number(document.getElementById("lado2").value);
+    let lado3 = Number(document.getElementById("lado3").value);
+    
+    let TipoDoTriangulo = "";
 
     if (lado1 == lado2 && lado2 == lado3) {
-        TipoDoTriangulo = "O Triângulo é EQULÁTERO."
+        TipoDoTriangulo = "O Triângulo é EQULÁTERO.";
 
-    } else if (lado1 == lado2 && lado1 && lado2 != lado3 || lado1 == lado3 && lado1 && lado3 != lado2 || lado2 == lado3 && lado2 && lado3 != lado1) {
-        TipoDoTriangulo = "O Triângulo é ESCALENO."
+    } else if (lado1 === lado2 || lado1 === lado3 || lado2 === lado3) {
+        TipoDoTriangulo = "O Triângulo é ISÓCELES.";
 
     } else {
-        TipoDoTriangulo = "O Triângulo é ISÓCELES."
+        TipoDoTriangulo = "O Triângulo é ESCALENO.";
+
     }
+    return TipoDoTriangulo;
 }
 
-document.getElementById("button").addEventListener("click", IdentificarTriangulo())
+const DeclararTriangulo = () => {
+    let Triangulo = IdentificarTriangulo();
+    document.getElementById("Triangulo").textContent = Triangulo;
+    console.log(Triangulo);
+};
