@@ -1,18 +1,18 @@
-const fibonacci = (n) => {
-    let num1 = 0
-    let num2 = 1
-    let numAtual = 0
-    let seq = []
+const chamarFibonacci = (numeroDaSequencia) => {
+    console.log(`A sequência de Fibonacci até o ${numeroDaSequencia}° numero é: ` + fibonacci(numeroDaSequencia));
+};
 
-    for(let i = 0; i < n; i++) {
-        numAtual = num1 + num2
-        num1 = num2
-        num2 = numAtual
+const fibonacci = (numeroDaSequncia) => {
+    let n1 = 0;
+    let n2 = 1;
+    let sequenciaDeFibonacci = [];
 
-        seq += `${numAtual}; `
+    for (let i = 0; i < numeroDaSequncia; i++) {
+        [n1, n2] = [n2, n1 + n2];
+        sequenciaDeFibonacci.push(n2);
     }
-    console.log(`A sequência de Fibonacci até o ${n}º número é: \n
-    ${seq}`)
-}
 
-fibonacci(50)
+    return sequenciaDeFibonacci;
+};
+
+chamarFibonacci(20);
